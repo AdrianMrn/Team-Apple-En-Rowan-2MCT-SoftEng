@@ -35,5 +35,31 @@ namespace lemonade
 
         }
 
+        public void CheckBuy()
+        {
+            Console.WriteLine(_model.WaardeButton);
+
+            if (!_model.IsBought)
+            {
+
+                CheckGrid();
+                _view.ButtonEnable();
+            }
+            else if (_model.IsBought)
+            {
+                Market market = new Market();
+
+                market.Show();
+            }
+
+            _model.IsBought = true;
+
+
+
+
+
+
+        }
+
     }  
 }
