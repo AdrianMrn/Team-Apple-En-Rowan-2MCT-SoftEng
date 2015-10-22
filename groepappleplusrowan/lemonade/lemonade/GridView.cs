@@ -43,15 +43,16 @@ namespace lemonade
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(_controller._model.WaardeButton);
-            
-            if (!_controller._model.IsBought) 
-            {
-                _controller.CheckGrid();
-                _controller._model.TheList[_controller._model.Counter]._view.button1.Enabled = true;
-            }
-            _controller._model.IsBought = true;
+            _controller.CheckBuy();
+         
+        }
 
+        public void ButtonEnable()
+        {
+
+
+
+            _controller._model.TheList[_controller._model.Counter]._view.button1.Enabled = true;
         }
     }
 }

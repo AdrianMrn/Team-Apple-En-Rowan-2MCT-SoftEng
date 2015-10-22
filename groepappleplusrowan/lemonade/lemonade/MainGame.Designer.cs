@@ -31,12 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblMoney = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblDay = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,21 +48,11 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblMoney);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(380, 78);
             this.panel2.TabIndex = 1;
-            // 
-            // lblMoney
-            // 
-            this.lblMoney.AutoSize = true;
-            this.lblMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoney.Location = new System.Drawing.Point(14, 18);
-            this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(74, 39);
-            this.lblMoney.TabIndex = 0;
-            this.lblMoney.Text = "$$$";
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -74,15 +62,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(305, 123);
             this.panel3.TabIndex = 2;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(20, 71);
-            this.progressBar1.Maximum = 600;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(274, 39);
-            this.progressBar1.TabIndex = 2;
-            this.progressBar1.Value = 50;
             // 
             // lblDay
             // 
@@ -94,6 +73,15 @@
             this.lblDay.Size = new System.Drawing.Size(115, 39);
             this.lblDay.TabIndex = 3;
             this.lblDay.Text = "Day: 1";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(20, 71);
+            this.progressBar1.Maximum = 600;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(274, 39);
+            this.progressBar1.TabIndex = 2;
+            this.progressBar1.Value = 50;
             // 
             // timer1
             // 
@@ -111,8 +99,6 @@
             this.Name = "MainGame";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainGame_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -123,7 +109,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblDay;

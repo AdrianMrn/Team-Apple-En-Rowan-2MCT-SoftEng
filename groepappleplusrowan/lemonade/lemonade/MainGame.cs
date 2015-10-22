@@ -61,10 +61,20 @@ namespace lemonade
             
         }
 
+        private void AddMoneyView()
+        {
+            MoneyController huidigeGridController = new MoneyController();
+            MoneyView huidigeMoneyView = huidigeGridController.getView();
+            panel2.Controls.Add(huidigeMoneyView);
+
+        }
+
+
+
         private void MainGame_Load(object sender, EventArgs e)
         {
             Console.WriteLine("load succes");
-            lblMoney.Text = "$400";
+            AddMoneyView();
             Addview();
             //lblDay.BackColor = Color.Transparent;
         }
@@ -88,6 +98,11 @@ namespace lemonade
             }
 
                 time++;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
