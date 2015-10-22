@@ -64,6 +64,14 @@
     <Compile Include="Market.Designer.cs">
       <DependentUpon>Market.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarketController.cs" />
+    <Compile Include="MarketModel.cs" />
+    <Compile Include="MarketView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarketView.Designer.cs">
+      <DependentUpon>MarketView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MoneyController.cs" />
     <Compile Include="MoneyModel.cs" />
     <Compile Include="MoneyView.cs">
@@ -82,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Market.resx">
       <DependentUpon>Market.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarketView.resx">
+      <DependentUpon>MarketView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoneyView.resx">
       <DependentUpon>MoneyView.cs</DependentUpon>

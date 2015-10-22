@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlMarket = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // pnlMarket
+            // 
+            this.pnlMarket.Location = new System.Drawing.Point(12, 12);
+            this.pnlMarket.Name = "pnlMarket";
+            this.pnlMarket.Size = new System.Drawing.Size(224, 341);
+            this.pnlMarket.TabIndex = 0;
+            this.pnlMarket.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMarket_Paint);
             // 
             // Market
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 331);
+            this.ClientSize = new System.Drawing.Size(245, 365);
+            this.Controls.Add(this.pnlMarket);
             this.Name = "Market";
             this.Text = "Market";
+            this.Load += new System.EventHandler(this.Market_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlMarket;
+
     }
 }

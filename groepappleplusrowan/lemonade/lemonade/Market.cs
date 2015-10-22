@@ -16,5 +16,25 @@ namespace lemonade
         {
             InitializeComponent();
         }
+
+        private void Market_Load(object sender, EventArgs e)
+        {
+            AddMoneyView(); 
+        }
+
+        private void AddMoneyView()
+        {
+            MarketController huidigeMarketController = new MarketController();
+            MarketView huidigeMarketView = huidigeMarketController.getView();
+            pnlMarket.Controls.Add(huidigeMarketView);
+
+        }
+
+   
+
+        private void pnlMarket_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
