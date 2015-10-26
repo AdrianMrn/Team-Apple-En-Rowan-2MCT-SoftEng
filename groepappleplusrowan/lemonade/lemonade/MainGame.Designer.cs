@@ -35,6 +35,8 @@
             this.lblDay = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblIncome = new System.Windows.Forms.Label();
+            this.upgradePnl = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,11 +58,12 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblIncome);
             this.panel3.Controls.Add(this.lblDay);
             this.panel3.Controls.Add(this.progressBar1);
             this.panel3.Location = new System.Drawing.Point(412, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(305, 123);
+            this.panel3.Size = new System.Drawing.Size(305, 140);
             this.panel3.TabIndex = 2;
             // 
             // lblDay
@@ -81,18 +84,35 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(274, 39);
             this.progressBar1.TabIndex = 2;
-            this.progressBar1.Value = 50;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblIncome
+            // 
+            this.lblIncome.AutoSize = true;
+            this.lblIncome.Location = new System.Drawing.Point(17, 113);
+            this.lblIncome.Name = "lblIncome";
+            this.lblIncome.Size = new System.Drawing.Size(46, 17);
+            this.lblIncome.TabIndex = 4;
+            this.lblIncome.Text = "label1";
+            // 
+            // upgradePnl
+            // 
+            this.upgradePnl.Location = new System.Drawing.Point(412, 158);
+            this.upgradePnl.Name = "upgradePnl";
+            this.upgradePnl.Size = new System.Drawing.Size(305, 292);
+            this.upgradePnl.TabIndex = 3;
+            this.upgradePnl.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 462);
+            this.Controls.Add(this.upgradePnl);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -113,6 +133,8 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblIncome;
+        private System.Windows.Forms.FlowLayoutPanel upgradePnl;
 
 
     }

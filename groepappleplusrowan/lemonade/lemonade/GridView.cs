@@ -59,9 +59,6 @@ namespace lemonade
 
         public void ButtonEnable()
         {
-
-
-
             _controller._model.TheList[_controller._model.Counter]._view.button1.Enabled = true;
         }
     }

@@ -60,8 +60,12 @@ namespace lemonade
             {
 
                 _gridController1._model.TheList[_model.Index]._view.GridView_Update(_model.MarketData[getIndexMarket, 0]);
-                MainGame._MoneyController._model.Money -= Int32.Parse(_model.MarketData[getIndexMarket, 1]);
+                MainGame._MoneyController._model.Money -= Int32.Parse(_model.MarketData[getIndexMarket, 1]); //take away price of building from total money
+
+                MainGame._MoneyController._model.Income += Int32.Parse(_model.MarketData[getIndexMarket, 2]); //add income of building to total income
                 
+                _gridController1._model.TheList[_model.Index]._model.BuildingIncome = Int32.Parse(_model.MarketData[getIndexMarket, 2]); //set building income in the grid model, so when we sell it, it can be subtracted from total income
+
                 MainGame._MoneyController._view.moneyUpdate();
                 Market.ActiveForm.Close();
                 _gridController1._model.TheList[_model.Index]._model.IsBuilt = true;

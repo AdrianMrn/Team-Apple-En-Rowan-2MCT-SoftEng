@@ -24,8 +24,9 @@ namespace lemonade
 
         public void moneyUpdate()
         {
-            label1.Text = "$" + _controller._model.Money.ToString();
-            Console.WriteLine("money =" + _controller._model.Money);
+            _controller._model.IncomeAfterUpgrade = _controller._model.Income * _controller._model.Multiplier;
+            label1.Text = "$" + Math.Floor(_controller._model.Money).ToString();
+            //Console.WriteLine("money per day =" + _controller._model.Income);
 
         }
         private void label1_Click(object sender, EventArgs e)

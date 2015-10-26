@@ -23,18 +23,14 @@ namespace lemonade
         public MoneyView getView()
         {
 
-
-
-
             return _view;
         }
 
-        public void updateMoney()
-        {
-
-
-            
-        }      
+        public void updateMoney() {
+            _model.Money += (_model.Income / 600);
+            _view.moneyUpdate();
+           
+        }
      
     }
  }

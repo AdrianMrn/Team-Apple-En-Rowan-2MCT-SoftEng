@@ -57,18 +57,15 @@ namespace lemonade
                 
             }
             else if (_model.IsBuilt){
-                if (MessageBox.Show ("Are you sure you want to sell this building", "Sell building",
+                if (MessageBox.Show ("Are you sure you want to sell this building for $" + _model.SellPrice + "?", "Sell building",
          MessageBoxButtons.YesNo, MessageBoxIcon.Question)
          == DialogResult.Yes)
                 {
-
-
-                    
                     _view.setEmpty();
                     MainGame._MoneyController._model.Money += _model.SellPrice;
                     MainGame._MoneyController._view.moneyUpdate();
                     _model.IsBuilt = false;
-                    
+                    MainGame._MoneyController._model.Income -= _model.BuildingIncome;
                 }
             
             

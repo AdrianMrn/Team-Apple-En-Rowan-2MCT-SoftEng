@@ -11,3 +11,8 @@ C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\
 C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\lemonade\obj\Debug\lemonade.MoneyView.resources
 C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\lemonade\obj\Debug\lemonade.Market.resources
 C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\lemonade\obj\Debug\lemonade.MarketView.resources
+C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\lemonade\obj\Debug\lemonade.UpgradeView.resources
+C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\lemonade\bin\Debug\lemonade.exe.manifest
+C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\lemonade\bin\Debug\lemonade.application
+C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\lemonade\obj\Debug\lemonade.exe.manifest
+C:\Users\Rowan\school\2e jaar\software engineering\groepappleplusrowan\lemonade\lemonade\obj\Debug\lemonade.application

@@ -15,6 +15,10 @@ namespace lemonade
 
       int sellPrice = 0;
       public int SellPrice { get { return sellPrice; } set { sellPrice = value; } }
+
+      int buildingIncome = 0;
+      public int BuildingIncome { get { return buildingIncome; } set { buildingIncome = value; } }
+
        public int Counter { get { return _counter; } set { _counter = value; } }
 
       bool isBuilt = false;
