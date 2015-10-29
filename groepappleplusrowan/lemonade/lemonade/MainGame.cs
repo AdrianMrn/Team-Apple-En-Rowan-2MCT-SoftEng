@@ -13,6 +13,8 @@ namespace lemonade
 
     public partial class MainGame : Form
     {
+        public static MoneyController _MoneyController;
+        UpgradeController _upgradeController;
         int aantalRijen = 5;
         int aantalKolommen = 5;
        
@@ -63,19 +65,24 @@ namespace lemonade
 
         private void AddMoneyView()
         {
-            MoneyController huidigeGridController = new MoneyController();
-            MoneyView huidigeMoneyView = huidigeGridController.getView();
+            _MoneyController = new MoneyController();
+            MoneyView huidigeMoneyView = _MoneyController.getView();
             panel2.Controls.Add(huidigeMoneyView);
 
         }
 
-
+        private void AddUpgradeView() {
+            _upgradeController = new UpgradeController();
+            UpgradeView huidigeUpgradeView = _upgradeController.getView();
+            upgradePnl.Controls.Add(huidigeUpgradeView);
+        }
 
         private void MainGame_Load(object sender, EventArgs e)
         {
             Console.WriteLine("load succes");
             AddMoneyView();
             Addview();
+            AddUpgradeView();
             //lblDay.BackColor = Color.Transparent;
         }
 
@@ -86,7 +93,10 @@ namespace lemonade
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            //_MoneyController.updateMoney();
+            _MoneyController._model.Money += (_MoneyController._model.IncomeAfterUpgrade / 600);
+            _MoneyController._view.moneyUpdate();
+            lblIncome.Text = "Money per day = $" + (_MoneyController._model.IncomeAfterUpgrade).ToString();
 
             progressBar1.Value = time;
 
@@ -103,6 +113,11 @@ namespace lemonade
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

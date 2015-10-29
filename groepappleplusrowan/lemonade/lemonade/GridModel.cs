@@ -12,9 +12,17 @@ namespace lemonade
       static List<GridController> gridjes = new List<GridController>();
       static int _counter = 0;
       bool _isBought = false;
-      public int Counter { get { return _counter; } set { _counter = value; } }
-        
 
+      int sellPrice = 0;
+      public int SellPrice { get { return sellPrice; } set { sellPrice = value; } }
+
+      int buildingIncome = 0;
+      public int BuildingIncome { get { return buildingIncome; } set { buildingIncome = value; } }
+
+       public int Counter { get { return _counter; } set { _counter = value; } }
+
+      bool isBuilt = false;
+      public bool IsBuilt { get { return isBuilt; } set { isBuilt = value; } }
 
       public List<GridController> TheList
       {

@@ -8,7 +8,7 @@ namespace lemonade
 {
     public class MoneyController
     {
-
+        
         public MoneyView _view;
         public MoneyModel _model;
         
@@ -23,19 +23,14 @@ namespace lemonade
         public MoneyView getView()
         {
 
-
-
-
             return _view;
         }
 
-
-
-
-
-      
+        public void updateMoney() {
+            _model.Money += (_model.Income / 600);
+            _view.moneyUpdate();
+           
+        }
      
     }
-       
-
-}
+ }

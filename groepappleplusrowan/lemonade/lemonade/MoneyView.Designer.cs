@@ -48,7 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "MoneyView";
-            this.Size = new System.Drawing.Size(158, 58);
+            this.Size = new System.Drawing.Size(267, 58);
             this.Load += new System.EventHandler(this.MoneyView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
